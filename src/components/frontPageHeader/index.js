@@ -7,7 +7,7 @@ class HeaderOne extends Component{
 		this.logout = this.logout.bind(this);
 		this.state={
 			dropdown: 'displaynone'
-		};
+		}; 
 }
 dropdown=()=>{
 	if(this.state.dropdown === 'displaynone'){
@@ -17,7 +17,16 @@ dropdown=()=>{
 logout() {
 		fire.auth().signOut();
 }
-	render(){	
+showcart(){
+	let {dispatch}=this.props
+	dispatch({
+		type:'showdiv',
+		payLoad: true
+})
+}
+	render(){
+		let {rightcart}= this.props;	
+		let rightcarts=[...rightcart];
 	return (
         <section className="hero">
 	<div className="container">
@@ -42,7 +51,7 @@ logout() {
 							<NavLink to="/offers"><a className="nav-link" href="/offers">OFFERS</a></NavLink>
 				    </li>
 				    <li className="nav-item">
-				      <a className="nav-link" href="#"><img src={require("../../static/images/Cart.png")}/></a>
+				      <a className="nav-link"  onClick={()=> this.showcart()}><img src={require("../../static/images/Cart.png")}/><div className="header-notif positioning-1">{rightcarts.length}</div></a>
 				    </li>
 				    <li className="nav-item">
 						

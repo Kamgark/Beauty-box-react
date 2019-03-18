@@ -8,6 +8,7 @@ import Payment from './pages/payment';
 import Error from './pages/error';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import fire from './config/fire';
+import {BeautyProvider} from './store/context'; 
 
 class App extends Component {
   constructor() {
@@ -34,29 +35,31 @@ class App extends Component {
   }
   render() {
     return (
-      <BrowserRouter>
-        <Switch>
-          <div>
-          {
-            this.state.user? 
-            (<div><Route path="/" component={Home} exact/>
-              <Route path="/home" component={Home}/>
-              <Route path="/about" component={Payment}/>
-              <Route path="/offers" component={Offers}/>
-              <Route path="/index" component={Index}/></div>
-            )
-            :
-            (<div><Route path="/" component={Index} exact/>
-              <Route path="/gifts" component={SignUp}/>
-              <Route path="/index" component={Index}/>
-              <Route path="/home" component={Error}/>
-              <Route path="/about" component={Error}/>
-              <Route path="/offers" component={Error}/></div>
-            )
-          }
-          </div>
-        </Switch>
-      </BrowserRouter>
+      <BeautyProvider>  
+        <BrowserRouter>
+          <Switch>
+            <div>
+            {
+              this.state.user? 
+              (<div><Route path="/" component={Home} exact/>
+                <Route path="/home" component={Home}/>
+                <Route path="/about" component={Payment}/>
+                <Route path="/offers" component={Offers}/>
+                <Route path="/index" component={Index}/></div>
+              )
+              :
+              (<div><Route path="/" component={Index} exact/>
+                <Route path="/gifts" component={SignUp}/>
+                <Route path="/index" component={Index}/>
+                <Route path="/home" component={Error}/>
+                <Route path="/about" component={Error}/>
+                <Route path="/offers" component={Error}/></div>
+              )
+            }
+            </div>
+          </Switch>
+        </BrowserRouter>
+      </BeautyProvider>
     );
   }
 }

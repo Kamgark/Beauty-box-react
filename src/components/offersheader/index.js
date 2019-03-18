@@ -17,7 +17,16 @@ dropdown=()=>{
 logout() {
 		fire.auth().signOut();
 }
+showcart(){
+	let {dispatch}=this.props
+	dispatch({
+		type:'showdiv',
+		payLoad: true
+})
+}
 	render(){
+		let {rightcart}= this.props;
+        let rightcarts=[...rightcart];
     return (
         <div> 
     <div className="overlay"></div>
@@ -44,7 +53,7 @@ logout() {
 							<NavLink to="/offers"><a className="nav-link">OFFERS</a></NavLink>
 				    </li>
 				    <li className="nav-item">
-				      <a className="nav-link" href="/"><img src={require("../../static/images/cart-white.png")}/></a>
+				      <a className="nav-link" onClick={()=> this.showcart()}><img src={require("../../static/images/cart-white.png")}/><div className="header-notif positioning-2">{rightcarts.length}</div></a>
 				    </li>
 				    <li className="nav-item">
 						<a className="nav-link" onClick={()=>{this.dropdown()}}><img src={require("../../static/images/User-white.png")}/></a>

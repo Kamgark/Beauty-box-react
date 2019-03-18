@@ -1,6 +1,26 @@
 import React, {Component} from 'react';
+import data from '../../data/data.json';
+
 class Popular extends Component{
-    
+
+    addtocart(val){
+        let {rightcart,dispatch,total}= this.props;
+        let rightcarts= [...rightcart];
+        rightcarts.push(val);
+        total=total + val.price
+        dispatch({
+            type: 'total',
+            payLoad: total
+        })
+        dispatch({
+            type: 'rightcart',
+            payLoad: rightcarts
+        })
+        dispatch({
+            type:'showdiv',
+            payLoad: true
+        })
+    }
     render(){
     return(
         <section className="image-section">
@@ -13,50 +33,24 @@ class Popular extends Component{
                             <p><img src={require("../../static/images/LIne.png")}/></p>
                         </div>
                     </div>
-                    <div className="col-md-3">
-                        <div className="gift-img">
-                            <img src={require("../../static/images/Gift.png")} className="image"/>
-                            <div className="overlay">
-                            <div className="btn white-btn">ADD TO CART</div>
-                            <div className="footer">
-                                <h3>August 2018</h3>
+                    {
+                        
+                        data.data && data.data.products.map((items,index)=>{
+                            return(
+                                <div className="col-md-3">
+                                <div className="gift-img">
+                                    <img src={require('../../static/images/'+ items.imageUrl)} className="image"/>
+                                    <div className="overlay">
+                                        <div className="btn white-btn" onClick={()=> this.addtocart(items)}>ADD TO CART</div>
+                                        <div className="footer">
+                                            <h3>{items.date}</h3>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="gift-img">
-                            <img src={require("../../static/images/Gift.png")} className="image"/>
-                            <div className="overlay">
-                            <div className="btn white-btn ">ADD TO CART</div>
-                            <div className="footer">
-                                <h3>August 2018</h3>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="gift-img">
-                            <img src={require("../../static/images/Gift.png")} className="image"/>
-                            <div className="overlay">
-                            <div className="btn white-btn">ADD TO CART</div>
-                            <div className="footer">
-                                <h3>August 2018</h3>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="gift-img">
-                            <img src={require("../../static/images/Gift.png")} className="image"/>
-                            <div className="overlay">
-                            <div className="btn white-btn" >ADD TO CART</div>
-                            <div className="footer">
-                                <h3>August 2018</h3>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </section>

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class Sidebar extends Component{
     state={
@@ -20,9 +21,14 @@ class Sidebar extends Component{
 
     }
     render(){
+        let {dispatch, showdiv, rightcart,total}= this.props;
+        let rightcarts=[...rightcart];
         return(
             <div>
-                <div className="red-button" onMouseEnter={() => this.showcart("enter")}></div>
+                {
+                        showdiv && <div className="red-button" onMouseEnter={() => this.showcart("enter")}>{rightcarts.length}</div>
+                }
+                
                { this.state.showcart && 
                 <div onMouseLeave={()=> this.showcart('leave')} className={"right-sidebar-outer " + this.state.claseName}>
                     <div className="right-sidebar">        
@@ -31,16 +37,15 @@ class Sidebar extends Component{
                             <h3>ORDER SUMMARY</h3>
                             <table className="table">
                             <tbody>
-                            <tr>
-                                <td>icon</td>
-                                <td>3 Month subcription</td>
-                                <td>120 QR</td>
+                        {rightcarts && rightcarts.map((items,index)=>{
+                            return(
+                                <tr>
+                                <td>{items.name}</td>
+                                <td>{items.subscription} subscription</td>
+                                <td>{items.price} QR</td>
                             </tr>
-                            <tr>
-                                <td>icon</td>
-                                <td>12 Month subcription</td>
-                                <td>140 QR</td>
-                            </tr>
+                            )})}
+                            
                             <tr>
                                 <td>Tax</td>
                                 <td></td>
@@ -55,12 +60,12 @@ class Sidebar extends Component{
                             <tr>
                                 <td>Total</td>
                                 <td></td>
-                                <td>260 QR</td>                  
+                                <td>{total} QR</td>                  
                             </tr>
                             </tbody>
                         </table>
                         </div>
-                            <button className="btn">Check Out</button>				
+                            <Link to='/about'><button className="btn full-width">Check Out</button></Link>				
                     </div>                
             </div>
             </div>

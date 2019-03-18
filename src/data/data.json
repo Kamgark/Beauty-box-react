@@ -1,0 +1,38 @@
+{
+    "data":{
+        "products":[
+            {
+                "id":1,
+                "name":"Car",
+                "imageUrl":"product1.jpg",
+                "date":"June 2018",
+                "price":100,
+                "subscription": "3 months"
+            },
+            {
+                "id":2,
+                "name":"Gift",
+                "imageUrl":"product2.png",
+                "date":"August 2018",
+                "price":80,
+                "subscription": "12 months"
+            },
+            {
+                "id":3,
+                "name":"Box",
+                "imageUrl":"product3.jpg",
+                "date":"September 2018",
+                "price":120,
+                "subscription": "6 months"
+            },
+            {
+                "id":4,
+                "name":"Girl",
+                "imageUrl":"product4.jpg",
+                "date":"November 2018",
+                "price":90,
+                "subscription": "8 months"
+            }
+        ]
+    }
+}

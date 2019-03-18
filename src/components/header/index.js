@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {NavLink, Link} from 'react-router-dom';
 import fire from '../../config/fire';
-class Header extends Component{
+class Header extends Component{ 
     constructor(props) {
 		super(props);
         this.logout = this.logout.bind(this);
@@ -17,7 +17,16 @@ dropdown=()=>{
 logout() {
 		fire.auth().signOut();
 }
+showcart(){
+	let {dispatch}=this.props
+	dispatch({
+		type:'showdiv',
+		payLoad: true
+})
+}
     render(){
+        // let {rightcart}= this.props;
+        // let rightcarts=[...rightcart];
     return( 
         <section className="hero1 container-fluid">
             <div className="container">
@@ -42,7 +51,7 @@ logout() {
 							<NavLink to="/offers"><a className="nav-link">OFFERS</a></NavLink>
 				    </li>
                             <li className="nav-item">
-                            <a className="nav-link" href="#"><i className="fa fa-shopping-cart"></i></a>
+                            <a className="nav-link" onClick={()=> this.showcart()}><i className="fa fa-shopping-cart"></i><div className="header-notif positioning-2"></div></a>
                             </li>
                             <li className="nav-item">
                             <a className="nav-link" onClick={()=>{this.dropdown()}}><img src={require("../../static/images/User-white.png")}/></a>

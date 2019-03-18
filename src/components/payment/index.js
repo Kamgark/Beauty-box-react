@@ -1,5 +1,8 @@
-import React from 'react'
-const PaymentForm=()=>{
+import React, {Component} from 'react'
+class PaymentForm extends Component{
+    render(){
+        let {rightcart,total}= this.props;
+        let rightcarts=[...rightcart];
     return(
         <section className="payment-section" id="payment-sec">
             <div className="container">
@@ -88,16 +91,14 @@ const PaymentForm=()=>{
                             <table className="table">
             
                             <tbody>
-                            <tr>
-                                <td>icon</td>
-                                <td>3 Month subcription</td>
-                                <td>120 QR</td>
+                            {rightcarts && rightcarts.map((items,index)=>{
+                            return(
+                                <tr>
+                                <td>{items.name}</td>
+                                <td>{items.subscription} subscription</td>
+                                <td>{items.price} QR</td>
                             </tr>
-                            <tr>
-                                <td>icon</td>
-                                <td>12 Month subcription</td>
-                                <td>140 QR</td>
-                            </tr>
+                            )})}
                             <tr>
                                 <td>Tax</td>
                                 <td></td>
@@ -112,7 +113,7 @@ const PaymentForm=()=>{
                             <tr>
                                 <td>Total</td>
                                 <td></td>
-                                <td>260 QR</td>                  
+                                <td>{total} QR</td>                  
                             </tr>
                             </tbody>
                         </table>
@@ -123,6 +124,6 @@ const PaymentForm=()=>{
             </div>
         </div>
     </section>
-    )
+    )}
 }
 export default PaymentForm;
