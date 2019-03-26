@@ -30,10 +30,10 @@ class SignUpForm extends Component{
                     <div className="card card-width">
                         <div className="card-body">
                             <div className="container">
-                                <form className="form-signin" role="form">
+                             <form className="form-signin" role="form">
                                     <h2 className="form-signin-heading">SIGN UP</h2><br/><br/>
                                     <label>User Name</label>
-                                    <input type="text" className="form-control" placeholder="John" required="" autofocus=""/><br/>
+                                    <input type="text" className="form-control" placeholder="John" required autofocus/><br/>
                                     <label>Email Address</label>
                                     <input value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="John@gmail.com" required="" autofocus=""/><br/>
                                     <label>Password</label>
