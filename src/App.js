@@ -32,8 +32,9 @@ class App extends Component {
         // localStorage.removeItem('user');
       }
     });
+    
   } 
-  
+
   render() {
     return (
       <BeautyProvider>  
