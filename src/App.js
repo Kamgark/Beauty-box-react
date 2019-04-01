@@ -15,6 +15,7 @@ class App extends Component {
     super();
     this.state = ({
       user: null,
+        loader: true
     });
     this.authListener = this.authListener.bind(this);
   }
@@ -25,10 +26,10 @@ class App extends Component {
   authListener() {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.setState({ user });
+        this.setState({ user , loader: false});
         // localStorage.setItem('user', user.uid);
       } else {
-        this.setState({ user: null });
+        this.setState({ user: null, loader: false });
         // localStorage.removeItem('user');
       }
     });
@@ -37,30 +38,37 @@ class App extends Component {
 
   render() {
     return (
-      <BeautyProvider>  
-        <BrowserRouter>
+      <BeautyProvider>
+          {
+
+            this.state.loader  ?
+            <div className="fuck">
+              <div id="breaty" class="loader"></div>
+            </div>:
+          <BrowserRouter>
+
           <Switch>
-            <div>
-            {
-              this.state.user? 
-              (<div><Route path="/" component={Home} exact/>
-                <Route path="/home" component={Home}/>
-                <Route path="/about" component={Payment}/>
-                <Route path="/offers" component={Offers}/>
-                <Route path="/index" component={Index}/></div>
-              )
-              :
-              (<div><Route path="/" component={Index} exact/>
-                <Route path="/gifts" component={SignUp}/>
-                <Route path="/index" component={Index}/>
-                <Route path="/home" component={Error}/>
-                <Route path="/about" component={Error}/>
-                <Route path="/offers" component={Error}/></div>
-              )
-            }
-            </div>
+          <div>
+          {
+          this.state.user?
+          (<div><Route path="/" component={Home} exact/>
+          <Route path="/home" component={Home}/>
+          <Route path="/about" component={Payment}/>
+          <Route path="/offers" component={Offers}/>
+          <Route path="/index" component={Index}/></div>
+          ) :
+          (<div><Route path="/" component={Index} exact/>
+          <Route path="/gifts" component={SignUp}/>
+          <Route path="/index" component={Index}/>
+          <Route path="/home" component={Error}/>
+          <Route path="/about" component={Error}/>
+          <Route path="/offers" component={Error}/></div>
+          )
+          }
+          </div>
           </Switch>
-        </BrowserRouter>
+          </BrowserRouter>
+          }
       </BeautyProvider>
     );
   }
