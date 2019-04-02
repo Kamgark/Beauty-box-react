@@ -12,5 +12,5 @@ class Signin extends Component {
             </Layout>
         )
     }
-}
+} 
 export default Signin;

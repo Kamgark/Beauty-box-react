@@ -8,7 +8,7 @@ const Footer = () => {
 		        <div className="row">
 			        <div className="social-icons">
 				        <div className="footer-logo">
-                            <img src={require("../../static/images/Logo.png")}/>
+                            <img src={require("../../static/images/FooterLogo.png")}/>
 				        </div>
                         <ul className="nav justify-content-center">
                             <li className="nav-item">

@@ -2,6 +2,12 @@ body{
 	margin:0;
 	padding: 0;
 }
+.google-translator{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
 .hero{
 background-blend-mode: normal, multiply, soft-light, multiply;
 background-image: url("./static/images/Hero.png");
@@ -53,6 +59,15 @@ background-position: right;
    text-align: center;
    margin-top: 30px;
    
+}
+.hero1 .logo img{
+  width: 100px;
+}
+.hero-2 .logo img{
+  width: 70px;
+}
+.hero .logo img{
+  width: 50px;
 }
 /* header section end */
 
@@ -501,6 +516,7 @@ margin-top: 20px;
 }
 /*form section end*/
 /*footer section start*/
+
 .footer-section{
 	width: 100%;
 	height: auto;
@@ -546,8 +562,14 @@ margin-top: 20px;
     font-size: 18px!important;
 }
 /*sign in page css*/
+.login-sign-div{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .sign-color{
-    margin-top: 10px;
+    margin: 0;
 }
 .sign-color a{
     color: #f25cb2;
@@ -627,6 +649,9 @@ margin-top: 20px;
    margin-top: 20px;
   }
   /*payment section start*/
+  .checkbox input{
+    margin: 20px 10px;
+  }
   #payment-sec .payment-section{
   width: 100%!important;
   height: 100%!important;
@@ -781,7 +806,7 @@ margin-top: 20px;
 }
 .user-drop{
     background-color: #f7f7f7;
-    padding: 10px 15px;
+    padding: 10px 10px;
     border: 1px solid #ec008c;
     border-radius: 3px;
     position: absolute;
@@ -789,7 +814,7 @@ margin-top: 20px;
 }
 .user-drop1{
   background-color: #1a1a38;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border: 1px solid #ec008c;
   border-radius: 3px;
   position: absolute;
@@ -797,7 +822,7 @@ margin-top: 20px;
 }
 .user-drop2{
   background-color: #1a1a38;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border: 1px solid #ec008c;
   border-radius: 3px;
   position: absolute;
@@ -852,7 +877,8 @@ margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff
+  color: #ffffff;
+  z-index: 4;
 }
 .transitioncart{
   transform: width .5s;
@@ -914,7 +940,15 @@ margin-top: 20px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
 }
-
+.mobile-header{
+  display: none;
+}
+.desktop-version{
+  display: flex;
+}
+.nav-right{
+  display: none;
+}
 /* Safari */
 @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
@@ -924,4 +958,344 @@ margin-top: 20px;
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+/* responsive */
+@media (max-width: 479px) and (min-width: 320px){
+  .hero .header {
+    padding: 10px 0px;
+}
+.mob-nave{
+  list-style: none;
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #ec008c;
+  display: none;
+  right: 12px;
+}
+.mob-nave li a {
+  color: #817878;
+  text-decoration: none!important;
+  position: relative;
+  cursor: pointer;
+}
+.mobile-header{
+  display: block;
+}
+.mob-ham{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mob-ham .first-div{
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 25px;
+}
+.mob-ham .second-div{
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 30px;
+}
+.mob-ham .third-div{
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 25px;
+}
+.mob-ham>div{
+  margin-bottom: 4px;
+}
+.hero1 .nav {
+  margin-top: 0;
+}
+.mob-logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-right{
+  display: flex;
+  align-items: center
+}
+.desktop-version{
+  display: none;
+}
+.nav-right{
+  display: flex;
+}
+.user-drop {
+  top: 107px;
+  left: -79px;
+}
+.hero .image-container img{
+  width: 100%;
+}
+.content-container h3{
+  font-size: 20px;
+}
+.content-container strong {
+  font-size: 26px;
+}
+.content-container h2 {
+  font-size: 26px;
+}
+.hero {
+  min-height: 515px;
+}
+.hero .head-text {
+  height: 450px;
+}
+.icon-section {
+  height: auto;
+}
+.icon-section .box-border {
+  border-left: unset;
+  border-right: unset;
+}
+.icon-section h5 {
+ margin-bottom: 0;
+}
+.icon-section .beauty-box {
+  padding: 15px 10px;
+  height: auto;
+}
+.beauty-full .gift-image {
+  width: 100%;
+  height: 240px;
+  background-color: #e9e9e9;
+  margin-top: 25px;
+}
+.beauty-full .gift-image img {
+  padding: 40px 20px;
+  width: 100%;
+}
+.beauty-full .month-text {
+  margin-top: 35px;
+}
+.beauty-full .month-text .buttn {
+  margin-top: 15px;
+}
+.Subscribe-section .subscribe h1 {
+  font-size: 20px;
+}
+.Subscribe-section .subscribe p {
+  font-size: 13px;
+  width: unset;
+}
+.Subscribe-section .subscribe {
+  height: 320px;
+}
+.Subscribe-section {
+  min-height: 320px;
+}
+.card-section {
+  padding: 50px 10px;
+}
+.card-section .box-text .text {
+  width: unset;
+}
+.card-section .card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card-section .card .card-container {
+  margin-top: 0px;
+}
+.image-section .gift-img {
+  width: auto;
+  height: 272px;
+  margin-top: 50px;
+}
+.services-section {
+  height: auto;
+  padding-top: 35px;
+}
+.services-section .services {
+  margin-top: 10px;
+}
+.image-section {
+  padding-top: 35px;
+  margin-bottom: 50px;
+}
+.banner-section {
+  height: auto;
+}
+.banner-section .input {
+  margin: 5% 0%;
+}
+.banner-section .input input {
+  width: 100%;
+}
+.form-section {
+  padding-top: 35px;
+ }
+ .form-section .form {
+  margin: 20px auto;
+  padding: 12px;
+  width: 100%;  
+}
+.form-section .form input {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+.form-section .form textarea{
+  width: 100%;
+}
+.footer p {
+  text-align: center;
+}
+.image-section .overlay{
+  opacity: 1;
+}
+.btn {
+  color: white!important;
+  background-color: #f25cb2!important;
+}
+.right-sidebar .card {
+  margin: 0 2px;
+}
+#payment-sec .form-control {
+  width: 248px!important;
+}
+#payment-sec .list {
+  flex-direction: column;
+}
+#payment-sec .ccv {
+  width: 100%;
+}
+.center-align h1 {
+  font-size: 28px;
+}
+.overlay {
+  height: 430px;
+}
+.hero-2 {
+  min-height: 430px;
+}
+.right-box {
+  height: auto;
+  padding: 25px 8px;
+  margin-left: 0px;
+}
+.right-box .inner-box h1{
+  font-size: 22px;
+}
+.right-box .inner-box p{
+  font-size: 12px;
+}
+.form-signin {
+  padding: 0px;
+}
+.card-width {
+  width: 300px;
+}
+.card {
+  margin: 60% auto;
+}
+.image-contaner {
+  background-blend-mode: normal, multiply, soft-light, multiply;
+  background-image: url(/static/media/bg.bc0a0b35.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  min-height: 1050px;
+  margin: 30px auto;
+  background-position: center;
+}
+.google-translator{
+  right: 109px;
+}
+.hero1 .logo {
+  padding: 0px;
+}
+}
+@media (max-width: 574px) and (min-width: 480px){
+}
+@media (max-width: 684px) and (min-width: 575px){
+}
+@media (max-width: 767px) and (min-width: 685px){
+}
+@media (max-width: 991px) and (min-width: 768px){
+  .nav-link {
+    padding: .5rem 0.7rem !important;
+}
+.card-section .box-text .text {
+  width: 100%;
+ }
+ .form-section .form textarea{
+  width: 100%;
+}
+.image-section .gift-img {
+  width: auto;
+  height: 180px;
+}
+.form-section .form input {
+  margin-bottom: 12px;
+}
+.beauty-full .gift-image img {
+  width: 100%;
+}
+.card-section .card .card-body p {
+  padding-right: 0px;
+}
+.card-section .card .card-body .pink-btn2 {
+  padding: 5px 10px;
+}
+.btn {
+  padding: 8px 30px!important;
+}
+.image-section .overlay {
+  opacity: 1  ;
+}
+.image-section .footer h3{
+  font-size: 13px!important;
+}
+.head-text .image-container img{
+  width: 100%;
+}
+.btn {
+  color: white!important;
+  background-color: #f25cb2!important;
+}
+.image-div {
+  height: 180px;
+}
+.right-box {
+  height: 250px;
+  padding: 10px 75px;
+}
+.right-box .inner-box h1{
+  font-size: 20px;
+}
+.right-box .inner-box p{
+  font-size: 11px;
+}
+}
+@media (max-width: 1023px) and (min-width: 992px){
+
+}
+@media (max-width: 1199px) and (min-width: 1024px){
+  .beauty-full .gift-image img {
+    width: 100%;
+  }
+  .image-section .overlay {
+    opacity: 1  ;
+  }
+  .btn {
+    color: white!important;
+    background-color: #f25cb2!important;
+  }
+  .image-section .gift-img {
+    width: 100%;
+    height: 215px;
+}
+.image-section .footer h3 {
+  font-size: 16px!important;
+}
+.right-box .inner-box h1{
+  font-size: 30px;
+}
 }

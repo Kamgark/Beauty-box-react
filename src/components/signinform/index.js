@@ -17,18 +17,24 @@ class SignInForm extends Component{
     
       handleChange(e) {
         this.setState({ [e.target.name]: e.target.value });
-        console.log("change");
       }
-    
+      guest(){
+        this.setState({loader: true})
+        fire.auth().signInAnonymously().catch(function(error) {
+            this.setState({loader: false});
+            // Handle Errors here.
+            // var errorCode = error.code;
+            // var errorMessage = error.message;
+            // ...
+          }); 
+      }
       login(e) {
           this.setState({loader: true})
-        console.log("login");
         e.preventDefault();
         fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
             this.setState({red: true})
         }).catch((error) => {
             this.setState({loader: false});
-            console.log(error);
 
           });
       }
@@ -67,8 +73,11 @@ class SignInForm extends Component{
                                         <button className="btn btn-lg btn-primary btn-block" type="submit"
                                                 onClick={this.login}>Sign in
                                         </button>
-                                        <p className="sign-color">Don't have Account,<Link to="/gifts"><a >Sign
-                                            Up</a></Link></p>
+                                        <div className="login-sign-div" >
+                                            <p className="sign-color">OR</p>
+                                            <p className="sign-color">Continue as <Link to="/"><a onClick={()=>{this.guest()}}>Guest</a></Link></p>
+                                            <p className="sign-color">Don't have Account,<Link to="/gifts"><a > Sign Up</a></Link></p>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

@@ -44,14 +44,16 @@ class PaymentForm extends Component{
                         </div>
                         <div className="card payment-card m-0">
                             <div className="card-body">
-                                <form className="form">
+                                <form className="form checkbox">
                                     <h3>SELECT PAYMENT METHOD</h3>
-                                    <div className="buttons">
+                                    
+                                    <input type="checkbox"/>Cash On Delivery
+                                    {/* <div className="buttons">
                                     <button className="btn"><img src={require("../../static/images/Untitled-6.png")} alt=""/> Credit Card</button>
                                     <button className="btn"><img src={require("../../static/images/Untitled-5.png")} alt=""/> Bank Transfer</button>
                                     <button className="btn"><img src={require("../../static/images/paypal.png")} alt=""/> Paypal</button>
-                                </div>
-                                <label>NAME ON CARD</label>
+                                </div> */}
+                                {/* <label>NAME ON CARD</label>
                                 <input type="text" name="name" className="name"/>
                                 <label>CARD NUMBER</label>
                                 <input type="number" name="number" placeholder="0000-0000-0000-0000" className="name"/>
@@ -78,7 +80,7 @@ class PaymentForm extends Component{
                                     <label>CVV</label><br/>
                                     <input type="text" name="name" className="ccv"/><br/>
                                 </span>
-                                </div>
+                                </div> */}
                                     
                                 </form>
                             </div>
