@@ -23,6 +23,9 @@ const Footer = () => {
                             <li className="nav-item">
                             <NavLink to="/offers"><a className="nav-link" href="/offers">OFFERS</a></NavLink>
                             </li>
+                            <li className="nav-item">
+                                <NavLink to="/termsandconditions"><a className="nav-link" href="/offers">TERMS & CONDITIONS</a></NavLink>
+                            </li>
                             
                         </ul>
                         <ul className="nav justify-content-center">

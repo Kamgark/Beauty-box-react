@@ -12,6 +12,7 @@ import Icons from '../components/icons';
 import HeaderOne from '../components/frontPageHeader/index'
 import Sidebar from '../components/sidebar';
 import {BeautyConsumer} from '../store/context';
+import Chat from "../components/chatbtn/index";
 class Home extends Component {
     render(){
         
@@ -31,6 +32,7 @@ class Home extends Component {
                             <Sidebar dispatch={dispatch} total={total} showdiv={showdiv} rightcart={rightcart}/>
                             <Refer/>
                             <ContactUs/>
+                            <Chat/>
                         </div>
                         )
                     }

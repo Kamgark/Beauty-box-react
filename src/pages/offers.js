@@ -5,6 +5,7 @@ import OffersHeader from '../components/offersheader';
 import { Offercards } from '../components/offercards';
 import Sidebar from '../components/sidebar';
 import {BeautyConsumer} from '../store/context';
+import Chat from "../components/chatbtn/index";
 class Offers extends Component {
     render(){ 
         return(
@@ -20,6 +21,7 @@ class Offers extends Component {
                 }
                 </BeautyConsumer> 
                 <Offercards/>
+                <Chat/>
             </Layout>
         )
     }

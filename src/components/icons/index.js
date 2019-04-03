@@ -11,7 +11,7 @@ const Icons=()=>{
                             <img src={require("../../static/images/GIFT1.png")}/>
                         </div>
                         <div className="col-sm-9">
-                            <h5>Select Beauty Box</h5>
+                            <h5>Subscribe</h5>
                             <p>Lorem Ipisum dolar sit amit</p>
                         </div>
                     </div>
@@ -24,7 +24,7 @@ const Icons=()=>{
                             <img src={require("../../static/images/Car.png")}/>
                         </div>
                         <div className="col-sm-9">
-                            <h5>Free Shipping</h5>
+                            <h5>Deliver</h5>
                             <p>Lorem Ipisum dolar sit amit</p>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ const Icons=()=>{
                             <img src={require("../../static/images/Girl.png")}/>
                         </div>
                         <div className="col-sm-9">
-                            <h5>Online Support</h5>
+                            <h5>Unbox and Enjoy</h5>
                             <p>Lorem Ipisum dolar sit amit</p>
                         </div>
                     </div>

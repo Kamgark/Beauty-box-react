@@ -75,7 +75,9 @@ class SignInForm extends Component{
                                         </button>
                                         <div className="login-sign-div" >
                                             <p className="sign-color">OR</p>
-                                            <p className="sign-color">Continue as <Link to="/"><a onClick={()=>{this.guest()}}>Guest</a></Link></p>
+                                            <button className="btn btn-lg btn-primary btn-block guest-btn" type="submit">
+                                                <Link to="/"><a onClick={()=>{this.guest()}}>Guest</a></Link>
+                                            </button>
                                             <p className="sign-color">Don't have Account,<Link to="/gifts"><a > Sign Up</a></Link></p>
                                         </div>
                                     </form>

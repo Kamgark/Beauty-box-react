@@ -77,9 +77,9 @@ showcart(){
 								</Link>
 						</div>
                             </li>
-                            <li className="nav-item">
-                            <a className="nav-link" href="#"><img src={require("../../static/images/Flag'.png")}/>&nbsp;<i className="fa fa-chevron-down"></i></a>
-                            </li>
+                            {/*<li className="nav-item">*/}
+                            {/*<a className="nav-link" href="#"><img src={require("../../static/images/Flag'.png")}/>&nbsp;<i className="fa fa-chevron-down"></i></a>*/}
+                            {/*</li>*/}
                         </ul>
                         {
 					 this.state.header && <ul className="mob-nave mobile-header d">
@@ -103,9 +103,9 @@ showcart(){
 							 </Link>
 					 </div>
 					 </li>
-					 <li className="nav-item">
-						 <a className="" href="#"><img src={require("../../static/images/Flag'.png")}/>&nbsp;<i className="fa fa-chevron-down"/></a>
-					 </li>
+					 {/*<li className="nav-item">*/}
+						 {/*<a className="" href="#"><img src={require("../../static/images/Flag'.png")}/>&nbsp;<i className="fa fa-chevron-down"/></a>*/}
+					 {/*</li>*/}
 				</ul>
 				 }
                     </div>

@@ -7,6 +7,7 @@ import Refer from '../components/refer';
 import PaymentForm from '../components/payment';
 import {BeautyConsumer} from '../store/context';
 import Sidebar from '../components/sidebar';
+import Chat from "../components/chatbtn/index";
 class Payment extends Component {
     render(){
         return(
@@ -24,6 +25,7 @@ class Payment extends Component {
                 </BeautyConsumer> 
                 <Refer/>
                 <ContactUs/>
+                <Chat/>
             </Layout>
         )
     }

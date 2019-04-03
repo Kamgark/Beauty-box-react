@@ -6,9 +6,11 @@ import Index from './pages/index';
 import SignUp from './pages/signup';
 import Payment from './pages/payment';
 import Error from './pages/error';
+import TermsPage from './pages/terms';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import fire from './config/fire';
-import {BeautyProvider} from './store/context'; 
+import {BeautyProvider} from './store/context';
+
 
 class App extends Component {
   constructor() {
@@ -55,14 +57,16 @@ class App extends Component {
           <Route path="/home" component={Home}/>
           <Route path="/about" component={Payment}/>
           <Route path="/offers" component={Offers}/>
-          <Route path="/index" component={Index}/></div>
+          <Route path="/index" component={Index}/>
+                <Route path="/termsandconditions" component={TermsPage}/></div>
           ) :
           (<div><Route path="/" component={Index} exact/>
           <Route path="/gifts" component={SignUp}/>
           <Route path="/index" component={Index}/>
           <Route path="/home" component={Error}/>
           <Route path="/about" component={Error}/>
-          <Route path="/offers" component={Error}/></div>
+          <Route path="/offers" component={Error}/>
+                <Route path="/termsandconditions" component={TermsPage}/></div>
           )
           }
           </div>

@@ -5,7 +5,7 @@ body{
 .google-translator{
   position: absolute;
   top: 0;
-  right: 0;
+    left:0;
   z-index: 1000;
 }
 .hero{
@@ -62,12 +62,15 @@ background-position: right;
 }
 .hero1 .logo img{
   width: 100px;
+    margin-left: -10%;
 }
 .hero-2 .logo img{
   width: 70px;
+    margin-left: -10%;
 }
 .hero .logo img{
   width: 50px;
+    margin-left: 50%;
 }
 /* header section end */
 
@@ -270,12 +273,39 @@ background-position: right;
   
   }
   /* card section End */
+.chat-div{
+    background: #ec008c;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.chat-div:hover{
+    background: white;
+}
+.chat-div:hover i{
+    color: #ec008c;
+}
+.chat-div i{
+    font-size: 40px;
+    color: white;
+}
 /* services section start */
+.video-react .video-react-big-play-button{
+    top: 50%!important;
+    left: 46%!important;
+}
 .services-section{
-	width: 100%;
-	background-color: #f3f3f3;
-	height: 545px;
-	padding-top: 80px;
+    width: 100%;
+    background-color: #f3f3f3;
+    /* height: 545px; */
+    padding: 80px 0;
 }
 .services-section .box-text p{
   text-align: center;
@@ -924,6 +954,14 @@ margin-top: 20px;
   top: 2px;
   right: 6px;
 }
+.guest-btn a{
+    color: #f25cb2!important;
+    text-decoration: none;
+}
+.guest-btn a:hover {
+    background-color: #ec008c!important;
+    color: #fff!important;
+}
 .fuck{
     width: 100%;
     height: 100vh;
@@ -948,6 +986,46 @@ margin-top: 20px;
 }
 .nav-right{
   display: none;
+}
+/*terms page css*/
+.privacy-content-lo {
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.privacy-content {
+    margin-top: 30px;
+    margin: 0 auto;
+}
+.bb {
+    /* border-bottom: 1px solid #ccc; */
+    padding-bottom: 5px;
+    clear: both;
+    text-align: center;
+    border-top: 1px solid #000;
+    padding-top: 45px;
+    margin: 0px !important;
+    text-transform: uppercase;
+    font-size: 35px !important;
+    margin-bottom: 30px !important;
+    clear: both;
+}
+.privacy-content h2 {
+    margin: -50px 0 30px 80px;
+    font-size: 1.5em;
+    /* float: left; */
+    /* width: 92%; */
+    border: 0px;
+    margin-top: 30px;
+    font-family: 'AvenirNextRegular', sans-serif;
+}
+.privacy-content p {
+    margin: 0 0 15px 15px;
+    color: #5E524B;
+    line-height: 28px;
+    font-size: 18px;
+    font-family: 'AvenirNextRegular', sans-serif !important;
+    margin-bottom: 30px;
 }
 /* Safari */
 @-webkit-keyframes spin {
@@ -1014,6 +1092,7 @@ margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+    padding:0;
 }
 .nav-right{
   display: flex;
@@ -1170,7 +1249,7 @@ margin-top: 20px;
   font-size: 28px;
 }
 .overlay {
-  height: 430px;
+  height: 447px;
 }
 .hero-2 {
   min-height: 430px;
@@ -1195,6 +1274,9 @@ margin-top: 20px;
 .card {
   margin: 60% auto;
 }
+    .guest-btn a{
+        color: white!important;
+    }
 .image-contaner {
   background-blend-mode: normal, multiply, soft-light, multiply;
   background-image: url(/static/media/bg.bc0a0b35.png);
@@ -1206,7 +1288,7 @@ margin-top: 20px;
   background-position: center;
 }
 .google-translator{
-  right: 109px;
+  left: 30%;
 }
 .hero1 .logo {
   padding: 0px;
@@ -1273,6 +1355,12 @@ margin-top: 20px;
 .right-box .inner-box p{
   font-size: 11px;
 }
+    .google-translator {
+        left: 20%;
+    }
+    .guest-btn a{
+        color: white!important;
+    }
 }
 @media (max-width: 1023px) and (min-width: 992px){
 
@@ -1288,6 +1376,9 @@ margin-top: 20px;
     color: white!important;
     background-color: #f25cb2!important;
   }
+    .guest-btn a{
+        color: white!important;
+    }
   .image-section .gift-img {
     width: 100%;
     height: 215px;
@@ -1298,4 +1389,7 @@ margin-top: 20px;
 .right-box .inner-box h1{
   font-size: 30px;
 }
+    .google-translator {
+        left: 24%;
+    }
 }
