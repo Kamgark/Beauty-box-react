@@ -10,13 +10,18 @@ body{
 }
 .hero{
 background-blend-mode: normal, multiply, soft-light, multiply;
-background-image: url("./static/images/Hero.png");
+background-image: url("./static/images/mainpage.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 display: block;
-min-height: 800px;
+min-height: 894px;
 margin: 0 auto;
 background-position: right;
+}
+.head-text .content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .hero .header{
 	padding: 50px 20px;
@@ -24,7 +29,7 @@ background-position: right;
 .hero .head-text{
     display: flex;
     align-items: center; 
-    height: 700px;
+    height: 290px;
 }
  .nav li a{
   color: #817878;
@@ -71,6 +76,9 @@ background-position: right;
 .hero .logo img{
   width: 50px;
     margin-left: 50%;
+}
+.user-drop a{
+  font-size: 12px;
 }
 /* header section end */
 
@@ -288,6 +296,7 @@ background-position: right;
 }
 .chat-div:hover{
     background: white;
+    box-shadow: 0px 0px 25px 0px rgba(26,26,56,0.64);
 }
 .chat-div:hover i{
     color: #ec008c;
@@ -607,12 +616,12 @@ margin-top: 20px;
 }
 .image-contaner{
     background-blend-mode: normal, multiply, soft-light, multiply;
-  background-image: url("./static/images/bg.png");
+  background-image: url("./static/images/signinback.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
   min-height: 1158px;
-  margin: 50px auto;
+  /* margin: 50px auto; */
   background-position: center;
   }
 .sign-header{
@@ -621,7 +630,7 @@ margin-top: 20px;
   }
   .card{
     width: 100%;
-    margin: 23% auto;
+    margin: 12%;
   }
   .card-width{
       width: 350px;
@@ -755,10 +764,11 @@ margin-top: 20px;
 /*payment section end*/
 .hero-2{
     /* background-blend-mode: normal, multiply, soft-light, multiply; */
-    background-image: url("./static/images/offers-pic.png");
+    background-image: url("./static/images/herotwo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 495px;
+    /* min-height: 495px; */
+    min-height: 645px;
     margin: 0 auto;
 }
 .hero-2 .header{
@@ -787,7 +797,8 @@ margin-top: 20px;
     left: 0;
     background-color: #1a1a38;
     opacity: 0.9;
-    height: 495px;
+    /* height: 495px; */
+    height: 645px;
     box-shadow: 0px 10px 26px 1px rgba(26,26,56,0.64);
 }
 .image-div{
@@ -1279,7 +1290,6 @@ margin-top: 20px;
     }
 .image-contaner {
   background-blend-mode: normal, multiply, soft-light, multiply;
-  background-image: url(/static/media/bg.bc0a0b35.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
@@ -1303,6 +1313,9 @@ margin-top: 20px;
 @media (max-width: 991px) and (min-width: 768px){
   .nav-link {
     padding: .5rem 0.7rem !important;
+}
+.content-container h2 {
+  font-size: 30px;
 }
 .card-section .box-text .text {
   width: 100%;

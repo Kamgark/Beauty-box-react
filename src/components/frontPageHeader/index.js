@@ -116,7 +116,7 @@ showcart(){
 		<div className="row head-text">
 			<div className="col-md-6">
 				<div className="image-container">
-					<img src={require("../../static/images/Gift.png")}/>
+					{/* <img src={require("../../static/images/Gift.png")}/> */}
 				</div>
 			</div>
 			<div className="col-md-6">
