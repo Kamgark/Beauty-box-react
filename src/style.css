@@ -80,6 +80,27 @@ background-position: right;
 .user-drop a{
   font-size: 12px;
 }
+.language-drop button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.language-drop button:focus{
+  outline: none;
+}
+.language-drop .selector{
+  list-style: none;
+  padding-left: 0;
+}
+.language-drop{
+  background-color: #f7f7f7;
+  padding: 10px 10px;
+  border: 1px solid #ec008c;
+  border-radius: 3px;
+  position: absolute;
+  top: 45px;
+
+}
 /* header section end */
 
 /* icon section start */

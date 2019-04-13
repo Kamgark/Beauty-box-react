@@ -10,6 +10,8 @@ import TermsPage from './pages/terms';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import fire from './config/fire';
 import {BeautyProvider} from './store/context';
+import { LocalizeProvider } from "react-localize-redux";
+
 
 
 class App extends Component {
@@ -40,40 +42,42 @@ class App extends Component {
 
   render() {
     return (
-      <BeautyProvider>
+      <LocalizeProvider>
+        <BeautyProvider>
           {
 
-            this.state.loader  ?
-            <div className="fuck">
-              <div id="breaty" class="loader"></div>
-            </div>:
-          <BrowserRouter>
+              this.state.loader  ?
+              <div className="fuck">
+                <div id="breaty" class="loader"></div>
+              </div>:
+            <BrowserRouter>
 
-          <Switch>
-          <div>
-          {
-          this.state.user?
-          (<div><Route path="/" component={Home} exact/>
-          <Route path="/home" component={Home}/>
-          <Route path="/about" component={Payment}/>
-          <Route path="/offers" component={Offers}/>
-          <Route path="/index" component={Index}/>
-                <Route path="/termsandconditions" component={TermsPage}/></div>
-          ) :
-          (<div><Route path="/" component={Index} exact/>
-          <Route path="/gifts" component={SignUp}/>
-          <Route path="/index" component={Index}/>
-          <Route path="/home" component={Error}/>
-          <Route path="/about" component={Error}/>
-          <Route path="/offers" component={Error}/>
-                <Route path="/termsandconditions" component={TermsPage}/></div>
-          )
-          }
-          </div>
-          </Switch>
-          </BrowserRouter>
-          }
-      </BeautyProvider>
+            <Switch>
+            <div>
+            {
+            this.state.user?
+            (<div><Route path="/" component={Home} exact/>
+            <Route path="/home" component={Home}/>
+            <Route path="/about" component={Payment}/>
+            <Route path="/offers" component={Offers}/>
+            <Route path="/index" component={Index}/>
+                  <Route path="/termsandconditions" component={TermsPage}/></div>
+            ) :
+            (<div><Route path="/" component={Index} exact/>
+            <Route path="/gifts" component={SignUp}/>
+            <Route path="/index" component={Index}/>
+            <Route path="/home" component={Error}/>
+            <Route path="/about" component={Error}/>
+            <Route path="/offers" component={Error}/>
+                  <Route path="/termsandconditions" component={TermsPage}/></div>
+            )
+            }
+            </div>
+            </Switch>
+            </BrowserRouter>
+            }
+        </BeautyProvider>
+      </LocalizeProvider>
     );
   }
 }

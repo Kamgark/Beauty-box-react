@@ -13,7 +13,23 @@ import HeaderOne from '../components/frontPageHeader/index'
 import Sidebar from '../components/sidebar';
 import {BeautyConsumer} from '../store/context';
 import Chat from "../components/chatbtn/index";
+import { renderToStaticMarkup } from "react-dom/server";
+import { withLocalize } from "react-localize-redux";
+import globalTranslations from "../translations/global.json";
 class Home extends Component {
+    constructor(props) {
+        super(props);
+    
+        this.props.initialize({
+          languages: [
+            { name: "English", code: "en" },
+            { name: "Arabic", code: "fr" }
+          ],
+          translation: globalTranslations,
+          options: { renderToStaticMarkup }
+        });
+        this.props.addTranslationForLanguage(globalTranslations, "ar");
+      }
     render(){
         
         return( 
@@ -41,4 +57,4 @@ class Home extends Component {
         )
     }
 }
-export default Home;
+export default withLocalize(Home);

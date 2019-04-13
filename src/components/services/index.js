@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Translate } from "react-localize-redux";
 import { Player } from 'video-react';
 
 const Services=()=>{
@@ -9,8 +9,8 @@ const Services=()=>{
                 <div className="row">
                         <div className="col-md-12">
                         <div className="box-text" style={{display: 'flex', flexDirection:'column', alignItems:'center'}}>
-                            <p>Enjoy Our Services</p>
-                            <h5>HOW IT <span> WORKS</span></h5>
+                            <p><Translate id="nave.enjoyourservices">Enjoy Our Services</Translate></p>
+                            <h5><Translate id="nave.howit">HOW IT</Translate> <span><Translate id="nave.works"> WORKS</Translate></span></h5>
                             <p><img src={require("../../static/images/LIne.png")}/></p>
                             {/*<button className="btn">HOW IT WORKS</button>*/}
                         </div>

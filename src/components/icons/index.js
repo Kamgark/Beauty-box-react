@@ -1,4 +1,5 @@
 import React from 'react';
+import { Translate } from "react-localize-redux";
 const Icons=()=>{
     return(
         <section className="icon-section">
@@ -11,8 +12,8 @@ const Icons=()=>{
                             <img src={require("../../static/images/GIFT1.png")}/>
                         </div>
                         <div className="col-sm-9">
-                            <h5>Subscribe</h5>
-                            <p>Lorem Ipisum dolar sit amit</p>
+                            <h5><Translate id="nave.subscribe">Subscribe</Translate></h5>
+                            <p><Translate id="nave.subscribetext">Subscribe to our site</Translate></p>
                         </div>
                     </div>
                 
@@ -24,8 +25,8 @@ const Icons=()=>{
                             <img src={require("../../static/images/Car.png")}/>
                         </div>
                         <div className="col-sm-9">
-                            <h5>Deliver</h5>
-                            <p>Lorem Ipisum dolar sit amit</p>
+                            <h5><Translate id="nave.deliver">Deliver</Translate></h5>
+                            <p><Translate id="nave.delivertext">Deliver Now</Translate></p>
                         </div>
                     </div>
                 
@@ -37,8 +38,8 @@ const Icons=()=>{
                             <img src={require("../../static/images/Girl.png")}/>
                         </div>
                         <div className="col-sm-9">
-                            <h5>Unbox and Enjoy</h5>
-                            <p>Lorem Ipisum dolar sit amit</p>
+                            <h5><Translate id="nave.unbox">Unbox and Enjoy</Translate></h5>
+                            <p><Translate id="nave.unboxtext">Unbox gifts and enjoy</Translate></p>
                         </div>
                     </div>
                 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Translate } from "react-localize-redux";
 export const ContactUs = () => {
     return (
         <section className="form-section">
@@ -6,8 +7,8 @@ export const ContactUs = () => {
                 <div className="row">
                     <div className="col-md-12">
                             <div className="box-text">
-                                <p>For Any Queries</p>
-                                <h5>Contact <span> Us</span></h5>
+                                <p><Translate id="nave.foranyqueries">For Any Queries</Translate></p>
+                                <h5><Translate id="nave.contact">Contact </Translate><span><Translate id="nave.us"> Us</Translate></span></h5>
                                 <p><img src={require("../../static/images/LIne.png")}/></p>
                             </div>
                         </div>
@@ -17,7 +18,7 @@ export const ContactUs = () => {
                         <input type="text" name="Subject" placeholder="Subject"/><br/><br/>
                         <textarea cols="122" rows="7"/><br/>
                         <div className="submit">
-                            <button className="btn">SUBMIT</button>
+                            <button className="btn"><Translate id="nave.submit">SUBMIT</Translate></button>
                         </div>
                     </div>
                 </div>

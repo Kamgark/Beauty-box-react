@@ -1,4 +1,5 @@
 import React from 'react';
+import { Translate } from "react-localize-redux";
 const Refer = () => {
     return (
         <section className="banner-section">
@@ -6,7 +7,7 @@ const Refer = () => {
                 <div className="row banner">
                     <div className="col-md-6">
                         <div className="avail">
-                        <h2>Refer A Friend To Avail 10% Discount</h2>
+                        <h2><Translate id="nave.referto">Refer A Friend To Avail 10% Discount</Translate></h2>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam 
                         nonummy nibh euismod tincidunt ut laoreet</p>
                     </div>
