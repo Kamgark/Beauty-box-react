@@ -25,7 +25,7 @@ const Footer = () => {
                             <NavLink to="/offers"><a className="nav-link" href="/offers"><Translate id="nave.offers"/></a></NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/termsandconditions"><a className="nav-link" href="/offers"><Translate id="nave.terms&conditions">TERMS AND CONDITIONS</Translate></a></NavLink>
+                                <NavLink to="/termsandconditions"><a className="nav-link" href="/offers"><Translate id="nave.termsandconditions">TERMS AND CONDITIONS</Translate></a></NavLink>
                             </li>
                             
                         </ul>

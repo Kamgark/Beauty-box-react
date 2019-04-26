@@ -14,7 +14,7 @@ const Services=()=>{
                             <p><img src={require("../../static/images/LIne.png")}/></p>
                             {/*<button className="btn">HOW IT WORKS</button>*/}
                         </div>
-                            <Player style={{width:'100%', height:'100%'}}>
+                            <Player style={{width:'100%', height:'100%', paddingTop:"0"}} >
                                 <source src={require("../../static/images/Skype_Video.mp4")} />
                             </Player>
                     </div>

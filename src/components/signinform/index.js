@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import fire from '../../config/fire';
 import {Redirect} from 'react-router-dom';
+import { Translate } from "react-localize-redux";
 class SignInForm extends Component{
     constructor(props) {
         super(props);
@@ -46,7 +47,7 @@ class SignInForm extends Component{
             )
         }
     return(
-        <div>{
+        <div>{ 
             this.state.loader ?  <div className="fuck">
                 <div id="breaty" class="loader"></div>
             </div>:
@@ -57,13 +58,13 @@ class SignInForm extends Component{
                             <div className="card-body">
                                 <div className="container">
                                     <form className="form-signin" role="form">
-                                        <h2 className="form-signin-heading">WELCOME BACK!</h2><br/><br/>
-                                        <label>User Name/Email</label>
+                                        <h2 className="form-signin-heading"><Translate id="nave.welcomeback">WELCOME BACK!</Translate></h2><br/><br/>
+                                        <label><Translate id="nave.usernameemail">User Name/Email</Translate></label>
                                         <input value={this.state.email} onChange={this.handleChange} type="email"
                                                name="email" class="form-control" id="exampleInputEmail1"
                                                aria-describedby="emailHelp" placeholder="John@gmail.com" required=""
                                                autofocus=""/><br/>
-                                        <label>PASSWORD</label>
+                                        <label><Translate id="nave.password">PASSWORD</Translate></label>
                                         <input value={this.state.password} onChange={this.handleChange} type="password"
                                                name="password" class="form-control" id="exampleInputPassword1"
                                                placeholder="*******" required=""/><br/>
@@ -71,14 +72,14 @@ class SignInForm extends Component{
                                          <input type="checkbox" value="remember-me"/> Remember me
                                          </label> */}
                                         <button className="btn btn-lg btn-primary btn-block" type="submit"
-                                                onClick={this.login}>Sign in
+                                                onClick={this.login}><Translate id="nave.signin">Sign in</Translate>
                                         </button>
                                         <div className="login-sign-div" >
-                                            <p className="sign-color">OR</p>
+                                            <p className="sign-color"><Translate id="nave.or">OR</Translate></p>
                                             <button className="btn btn-lg btn-primary btn-block guest-btn" type="submit">
-                                                <Link to="/"><a onClick={()=>{this.guest()}}>Guest</a></Link>
+                                                <Link to="/"><a onClick={()=>{this.guest()}}><Translate id="nave.guest">Guest</Translate></a></Link>
                                             </button>
-                                            <p className="sign-color">Don't have Account,<Link to="/gifts"><a > Sign Up</a></Link></p>
+                                            <p className="sign-color"><Translate id="nave.donthaveaccount"/><Link to="/gifts"><a > <Translate id="nave.password">Sign Up</Translate></a></Link></p>
                                         </div>
                                     </form>
                                 </div>

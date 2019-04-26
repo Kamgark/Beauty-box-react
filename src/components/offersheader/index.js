@@ -1,13 +1,16 @@
 import React,{Component} from 'react';
 import {NavLink, Link} from 'react-router-dom';
-import fire from '../../config/fire'
+import fire from '../../config/fire';
+import { Translate } from "react-localize-redux";
+import LanguageToggle from '../language/index';
 class OffersHeader extends Component{
 	constructor(props) {
 		super(props);
 		this.logout = this.logout.bind(this);
 		this.state={
-			dropdown: 'displaynone',
-			header:false
+			dropdown: 'displaynone', 
+			header:false,
+			languagedrop: 'displaynone'
 		};
 }
 showhead=()=>{
@@ -17,6 +20,11 @@ dropdown=()=>{
 	if(this.state.dropdown === 'displaynone'){
 		this.setState({dropdown: 'display'})
 	}else this.setState({dropdown: 'displaynone'})
+}
+dropdownOne=()=>{
+	if(this.state.languagedrop === 'displaynone'){
+		this.setState({languagedrop: 'display'})
+	}else this.setState({languagedrop: 'displaynone'})
 }
 logout() {
 		fire.auth().signOut();
@@ -57,16 +65,16 @@ showcart(){
 			<div className="col-md-9">
 				 <ul className="nav justify-content-end desktop-version">
 				 <li className="nav-item">
-							<NavLink to="/home"><a className="nav-link">HOME</a></NavLink>
+							<NavLink to="/home"><a className="nav-link"><Translate id="nave.home"/></a></NavLink>
 				    </li>
 				    <li className="nav-item">
-							<NavLink to="/about"><a className="nav-link">ABOUT US</a></NavLink>
+							<NavLink to="/about"><a className="nav-link"><Translate id="nave.aboutus"/></a></NavLink>
 				    </li>
 				    <li className="nav-item">
-							<NavLink to="/gifts"><a className="nav-link">GIFTS</a></NavLink>
+							<NavLink to="/gifts"><a className="nav-link"><Translate id="nave.gifts"/></a></NavLink>
 				    </li>
 				    <li className="nav-item">
-							<NavLink to="/offers"><a className="nav-link">OFFERS</a></NavLink>
+							<NavLink to="/offers"><a className="nav-link"><Translate id="nave.offers"/></a></NavLink>
 				    </li>
 				    <li className="nav-item">
 				      <a className="nav-link" onClick={()=> this.showcart()}><img src={require("../../static/images/cart-white.png")}/><div className="header-notif positioning-2">{rightcarts.length}</div></a>
@@ -75,39 +83,45 @@ showcart(){
 						<a className="nav-link" onClick={()=>{this.dropdown()}}><img src={require("../../static/images/User-white.png")}/></a>
 						<div className={"user-drop2 "+ this.state.dropdown }>
 						<Link to='/'>
-								<a onClick={this.logout}>Log Out</a>
+								<a onClick={this.logout}><Translate id="nave.logout"/></a>
 						</Link>
 						</div>
 				    </li>
-				    {/*<li className="nav-item">*/}
-				      {/*<a className="nav-link" href="/"><img src={require("../../static/images/Flag'.png")}/>&nbsp;<i className="fa fa-chevron-down"/></a>*/}
-				    {/*</li>*/}
+				    <li className="nav-item">
+				      <a className="nav-link" onClick={()=>{this.dropdownOne()}}><img src={require("../../static/images/Flag'.png")}/>&nbsp;<i className="fa fa-chevron-down"/></a>
+				    <div className={"language-drop "+ this.state.languagedrop}>
+						<LanguageToggle/>
+						</div>
+						</li>
 				 </ul>
 				 {
 					 this.state.header && <ul className="mob-nave mobile-header d">
 					 <li className="nav-item">
-						 <NavLink to="/home"><a className="" >HOME</a></NavLink>
+						 <NavLink to="/home"><a className="" ><Translate id="nave.home"/></a></NavLink>
 					 </li>
 					 <li className="nav-item">
-						 <NavLink to="/about"><a className="">ABOUT US</a></NavLink>
+						 <NavLink to="/about"><a className=""><Translate id="nave.aboutus"/></a></NavLink>
 					 </li>
 					 <li className="nav-item">
-						 <NavLink to="/gifts"><a className="" href="#">GIFTS</a></NavLink>
+						 <NavLink to="/gifts"><a className="" href="#"><Translate id="nave.gifts"/></a></NavLink>
 					 </li>
 					 <li className="nav-item">
-						 <NavLink to="/offers"><a className="" href="/offers">OFFERS</a></NavLink>
+						 <NavLink to="/offers"><a className="" href="/offers"><Translate id="nave.offers"/></a></NavLink>
 					 </li>
 					 <li className="nav-item">
 					 <a className="" onClick={()=>{this.dropdown()}}><img src={require("../../static/images/User.png")}/></a>
 					 <div className={"user-drop "+ this.state.dropdown }>
 					 <Link to='/'>
-							 <a onClick={this.logout}>Log Out</a>
+							 <a onClick={this.logout}><Translate id="nave.logout"/></a>
 							 </Link>
 					 </div>
 					 </li>
-					 {/*<li className="nav-item">*/}
-						 {/*<a className="" href="#"><img src={require("../../static/images/Flag'.png")}/>&nbsp;<i className="fa fa-chevron-down"/></a>*/}
-					 {/*</li>*/}
+					 <li className="nav-item">
+				      <a className="nav-link" onClick={()=>{this.dropdownOne()}}><img src={require("../../static/images/Flag'.png")}/>&nbsp;<i className="fa fa-chevron-down"/></a>
+				    <div className={"language-drop "+ this.state.languagedrop}>
+						<LanguageToggle/>
+						</div>
+						</li>
 				</ul>
 				 }
 			</div>
@@ -117,7 +131,7 @@ showcart(){
 		<div className="row head-text">
 			<div className="col-md-12">
 				<div className="content-container center-align">
-					<h1>SPECIAL OFFERS</h1>
+					<h1><Translate id="nave.specialoffers">SPECIAL OFFERS</Translate></h1>
 				</div>
 			</div>
 		</div>

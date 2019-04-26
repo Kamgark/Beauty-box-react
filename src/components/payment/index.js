@@ -1,5 +1,6 @@
-import React, {Component} from 'react'
-class PaymentForm extends Component{
+import React, {Component} from 'react';
+import { Translate } from "react-localize-redux";
+class PaymentForm extends Component{ 
     render(){
         let {rightcart,total}= this.props;
         let rightcarts=[...rightcart];
@@ -11,22 +12,22 @@ class PaymentForm extends Component{
                         <div className="card payment-card m-0">
                             <div className="card-body">
                                 <form className="form">
-                                    <h3>YOUR INFORMATION</h3>
-                                    <label>FULL NAME</label><br/>
+                                    <h3><Translate id="nave.yourinformation">YOUR INFORMATION</Translate></h3>
+                                    <label><Translate id="nave.fullname">FULL NAME</Translate></label><br/>
                                     <input type="text" name="name" className="name"/><br/>
-                                    <label>ADRESS 1</label><br/>
+                                    <label><Translate id="nave.address">ADDRESS</Translate> 1</label><br/>
                                     <input type="text" name="adress" className="name"/><br/>
                                     <div className="adress">
                                     <span>
-                                    <label>ADRESS 2</label><br/>
+                                    <label><Translate id="nave.address">ADDRESS</Translate> 2</label><br/>
                                     <input type="text" name="adress2"/><br/>
                                     </span>
                                     <span>
-                                    <label>CITY</label><br/>
+                                    <label><Translate id="nave.city">CITY</Translate></label><br/>
                                     <input type="text" name="city"/><br/>
                                     </span>
                                     <span>
-                                    <label>STATE</label><br/>
+                                    <label><Translate id="nave.state">STATE</Translate></label><br/>
                                     <select className="form-control" id="sel1">
                                         <option>Select state</option>
                                         <option>pakistan</option>
@@ -35,7 +36,7 @@ class PaymentForm extends Component{
                                     </select><br/>
                                     </span>
                                     <span>
-                                    <label>ZIP CODE</label><br/>
+                                    <label><Translate id="nave.zipcode">ZIP CODE</Translate></label><br/>
                                     <input type="text" name="zip"/>
                                     </span>
                                     </div>
@@ -45,9 +46,9 @@ class PaymentForm extends Component{
                         <div className="card payment-card m-0">
                             <div className="card-body">
                                 <form className="form checkbox">
-                                    <h3>SELECT PAYMENT METHOD</h3>
+                                    <h3><Translate id="nave.selectpaymentmethod">SELECT PAYMENT METHOD</Translate></h3>
                                     
-                                    <input type="checkbox"/>Cash On Delivery
+                                    <input type="checkbox"/><Translate id="nave.cashondelivery">Cash On Delivery</Translate>
                                     {/* <div className="buttons">
                                     <button className="btn"><img src={require("../../static/images/Untitled-6.png")} alt=""/> Credit Card</button>
                                     <button className="btn"><img src={require("../../static/images/Untitled-5.png")} alt=""/> Bank Transfer</button>
@@ -89,7 +90,7 @@ class PaymentForm extends Component{
                     <div className="col-md-4">
                         <div className="card order-summary">
                         <div className="card-order">
-                            <h3>ORDER SUMMARY</h3>
+                            <h3><Translate id="nave.ordersummary">ORDER SUMMARY</Translate></h3>
                             <table className="table">
             
                             <tbody>
@@ -102,25 +103,25 @@ class PaymentForm extends Component{
                             </tr>
                             )})}
                             <tr>
-                                <td>Tax</td>
+                                <td><Translate id="nave.tax">Tax</Translate></td>
                                 <td></td>
                                 <td>0 QR</td>
                                 
                             </tr>
                             <tr>
-                                <td>Shopping Charges</td>
+                                <td><Translate id="nave.shoppingcharges">Shopping Charges</Translate></td>
                                 <td></td>
                                 <td>0 QR</td>    
                             </tr>
                             <tr>
-                                <td>Total</td>
+                                <td><Translate id="nave.total">Total</Translate></td>
                                 <td></td>
                                 <td>{total} QR</td>                  
                             </tr>
                             </tbody>
                         </table>
                         </div>
-                            <button className="btn">Check Out</button>				
+                            <button className="btn"><Translate id="nave.checkout">Check Out</Translate></button>				
                     </div>
                 </div>
             </div>

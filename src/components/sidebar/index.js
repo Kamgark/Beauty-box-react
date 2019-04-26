@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-
+import { Translate } from "react-localize-redux";
 class Sidebar extends Component{
     state={
         showcart: false,
@@ -34,7 +34,7 @@ class Sidebar extends Component{
                     <div className="right-sidebar">        
                             <div className="card order-summary">
                         <div className="card-order">
-                            <h3>ORDER SUMMARY</h3>
+                            <h3><Translate id="nave.ordersummary">ORDER SUMMARY</Translate></h3>
                             <table className="table">
                             <tbody>
                         {rightcarts && rightcarts.map((items,index)=>{
@@ -47,25 +47,25 @@ class Sidebar extends Component{
                             )})}
                             
                             <tr>
-                                <td>Tax</td>
+                                <td><Translate id="nave.tax">Tax</Translate></td>
                                 <td></td>
                                 <td>0 QR</td>
                                 
                             </tr>
                             <tr>
-                                <td>Shopping Charges</td>
+                                <td><Translate id="nave.shoppingcharges">Shopping Charges</Translate></td>
                                 <td></td>
                                 <td>0 QR</td>    
                             </tr>
                             <tr>
-                                <td>Total</td>
+                                <td><Translate id="nave.total">Total</Translate></td>
                                 <td></td>
                                 <td>{total} QR</td>                  
                             </tr>
                             </tbody>
                         </table>
                         </div>
-                            <Link to='/about'><button className="btn full-width">Check Out</button></Link>				
+                            <Link to='/about'><button className="btn full-width"><Translate id="nave.checkout">Check Out</Translate></button></Link>				
                     </div>                
             </div>
             </div>

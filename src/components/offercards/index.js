@@ -1,4 +1,5 @@
 import React from 'react';
+import { Translate } from "react-localize-redux";
 export const Offercards = () => {
     return (
         <section className="container">
@@ -13,13 +14,13 @@ export const Offercards = () => {
                 <div className="col-md-8">
                     <div className="right-box">
                         <div className="inner-box">
-                            <h1>FACIAL MAKEUP TREATMENT</h1>
+                            <h1><Translate id="nave.facialmakuptreatment">FACIAL MAKEUP TREATMENT</Translate></h1>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                                 nibh Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                             </p>
                             <div><div className="image-para"><img src={require("../../static/images/bullets.png")} alt=""/><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p></div>
                             <div className="image-para"><img src={require("../../static/images/bullets.png")} alt=""/><p>Euismod tincidunt ut laoreet dolore magna aliquam </p></div></div>
-                            <div><button class="btn">REDEEM NOW</button></div>
+                            <div><button class="btn"><Translate id="nave.Redeemnow">REDEEM NOW</Translate></button></div>
                         </div>
                     </div>
                 </div>
@@ -35,13 +36,13 @@ export const Offercards = () => {
                 <div className="col-md-8">
                     <div className="right-box">
                         <div className="inner-box">
-                            <h1>EYE MAKEUP TREATMENT</h1>
+                            <h1><Translate id="nave.eyemakuptreatment">EYE MAKEUP TREATMENT</Translate></h1>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                                 nibh Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                             </p>
                             <div><div className="image-para"><img src={require("../../static/images/bullets.png")} alt=""/><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p></div>
                             <div className="image-para"><img src={require("../../static/images/bullets.png")} alt=""/><p>Euismod tincidunt ut laoreet dolore magna aliquam </p></div></div>
-                            <div><button class="btn">REDEEM NOW</button></div>
+                            <div><button class="btn"><Translate id="nave.Redeemnow">REDEEM NOW</Translate></button></div>
                         </div>
                     </div>
                 </div>
@@ -57,13 +58,13 @@ export const Offercards = () => {
                 <div className="col-md-8">
                     <div className="right-box">
                         <div className="inner-box">
-                            <h1>HAIR MAKEUP TREATMENT</h1>
+                            <h1><Translate id="nave.hairmakuptreatment">HAIR MAKEUP TREATMENT</Translate></h1>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                                 nibh Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                             </p>
                             <div><div className="image-para"><img src={require("../../static/images/bullets.png")} alt=""/><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p></div>
                             <div className="image-para"><img src={require("../../static/images/bullets.png")} alt=""/><p>Euismod tincidunt ut laoreet dolore magna aliquam </p></div></div>
-                            <div><button class="btn">REDEEM NOW</button></div>
+                            <div><button class="btn"><Translate id="nave.Redeemnow">REDEEM NOW</Translate></button></div>
                         </div>
                     </div>
                 </div>

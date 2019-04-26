@@ -8,7 +8,23 @@ import PaymentForm from '../components/payment';
 import {BeautyConsumer} from '../store/context';
 import Sidebar from '../components/sidebar';
 import Chat from "../components/chatbtn/index";
+import { renderToStaticMarkup } from "react-dom/server";
+import { withLocalize } from "react-localize-redux";
+import globalTranslations from "../translations/global.json";
 class Payment extends Component {
+    constructor(props) {
+        super(props);
+    
+        this.props.initialize({
+          languages: [
+            { name: "English", code: "en" },
+            { name: "Arabic", code: "fr" }
+          ],
+          translation: globalTranslations,
+          options: { renderToStaticMarkup }
+        });
+        this.props.addTranslationForLanguage(globalTranslations, "ar");
+      }
     render(){
         return(
             <Layout>
@@ -30,4 +46,4 @@ class Payment extends Component {
         )
     }
 }
-export default Payment;
+export default withLocalize(Payment);
